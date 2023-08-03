@@ -6,19 +6,23 @@ import enAlphabet from './components/alphabet.json'
 import Letters from './components/Letters'
 import Solution from './components/Solution'
 import Scores from './components/Scores'
+import Hanger from './components/Hanger'
 
 function App() {
   let cont = {word: "easyaa", hint: "Some text"}
   cont.filled = Array(cont.word.length).fill("_")
   let [alphabet, setAlphabet] = useState(enAlphabet)
   let [game, setGame] = useState(cont)
+  let [mistakes, setMistakes] = useState(0)
   
   function checkLetterInWord(letter) {
     if (game.word.toUpperCase().includes(letter)) {
       let newGame = {...game}
       newGame.filled = game.word.split("").map((el, index) => el.toUpperCase() === letter ? letter : game.filled[index])
       setGame(newGame)
-    } 
+    } else {
+      setMistakes(mistakes + 1)
+    }
   }
   function removeLetter(letter) {
     let newAlphabet = {...alphabet}
@@ -31,8 +35,10 @@ function App() {
     checkLetterInWord(letter) 
     removeLetter(letter)
   }
+  let l = 3
   return (
     <div className="hangman">
+      <Hanger mistakes={mistakes}/>
       <Scores scores="100" />
       <Solution game={game}/>
       <Letters alphabet={alphabet.letters} checked={checkLetter}/>
