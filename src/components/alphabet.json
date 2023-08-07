@@ -1,4 +1,4 @@
-{ "letters": [
+{"letters" :[
     {"name": "A", "checked": false},
     {"name": "B", "checked": false},
     {"name": "C", "checked": false},
@@ -25,5 +25,4 @@
     {"name": "X", "checked": false},
     {"name": "Y", "checked": false},
     {"name": "Z", "checked": false}
-  ]
-} 
+  ]} 

@@ -1,0 +1,60 @@
+.hanger__moon {
+	width: 150px;
+    height: 150px;
+    opacity: 0.6;
+    border-radius: 50%;
+    background-color: #dadada;
+    top: 8px;
+    right: 220px;
+    position: absolute;
+	box-shadow: 0 0 60px 30px #e0e0e0;
+	z-index: -1;
+    animation: 2s linear moon-moving;
+    animation-iteration-count: 1;
+}
+@keyframes moon-moving {
+	0% {
+		right: -200px;
+		top: 100px;
+	}
+
+	100% {
+		top: 8px;
+    	right: 220px;
+	}
+}
+.moon-spot {
+	background-color: #adacac;
+	border-radius: 50%;
+	position: absolute;
+}
+.moon-spot-1 {
+	width: 10px;
+	height: 10px;
+	top: 33px;
+	left: 36px;
+}
+.moon-spot-2 {
+	width: 20px;
+	height: 20px;
+	top: 49px;
+	left: 56px;
+}
+.moon-spot-3 {
+	width: 6px;
+    height: 6px;
+    top: 120px;
+    left: 40px;
+}
+.moon-spot-4 {
+	width: 30px;
+	height: 30px;
+	top: 90px;
+    left: 90px;
+}
+.moon-spot-5 {
+	width: 6px;
+	height: 6px;
+	top: 35px;
+    left: 120px;
+}

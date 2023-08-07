@@ -1,0 +1,177 @@
+.game-over {
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.game-over p {
+	margin-bottom: 25px;
+}
+.game-over__loose {
+	font-family: 'Butcher the Baker', Courier, monospace;
+	color: #7b0101;
+	font-size: 64px;
+}
+.game-over__win {
+	font-family: 'Mr Dafoe';
+	margin: 0;
+	font-size: 5.5em;
+	margin-top: -0.6em;
+	color: white;
+	text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+	transform: rotate(-7deg);
+}
+.firework {
+	position: absolute;
+    transform: translate(-50%, -50%);
+    width: 0.5vmin;
+    aspect-ratio: 1;
+}
+.firework1 {
+    top: 10%;
+    left: 46%;
+    background: radial-gradient(circle, #ff0 0.2vmin, #0000 0) 50% 00%, 
+		radial-gradient(circle, #ff0 0.3vmin, #0000 0) 00% 50%, 
+		radial-gradient(circle, #ff0 0.5vmin, #0000 0) 50% 99%, 
+		radial-gradient(circle, #ff0 0.2vmin, #0000 0) 99% 50%, 
+		radial-gradient(circle, #ff0 0.3vmin, #0000 0) 80% 90%, 
+		radial-gradient(circle, #ff0 0.5vmin, #0000 0) 95% 90%, 
+		radial-gradient(circle, #ff0 0.5vmin, #0000 0) 10% 60%, 
+		radial-gradient(circle, #ff0 0.2vmin, #0000 0) 31% 80%, 
+		radial-gradient(circle, #ff0 0.3vmin, #0000 0) 80% 10%, 
+		radial-gradient(circle, #ff0 0.2vmin, #0000 0) 90% 23%, 
+		radial-gradient(circle, #ff0 0.3vmin, #0000 0) 45% 20%, 
+		radial-gradient(circle, #ff0 0.5vmin, #0000 0) 13% 24%;
+		background-size: 0.5vmin 0.5vmin;
+		background-repeat: no-repeat;
+		animation: firework 3s infinite;
+}
+.firework2 {
+    top: 15%;
+    left: 66%;
+    background: radial-gradient(circle, #7e00ff 0.2vmin, #0000 0) 50% 00%, 
+		radial-gradient(circle, #7e00ff 0.3vmin, #0000 0) 00% 50%, 
+		radial-gradient(circle, #7e00ff 0.5vmin, #0000 0) 50% 99%, 
+		radial-gradient(circle, #7e00ff 0.2vmin, #0000 0) 99% 50%, 
+		radial-gradient(circle, #7e00ff 0.3vmin, #0000 0) 80% 90%, 
+		radial-gradient(circle, #7e00ff 0.5vmin, #0000 0) 95% 90%, 
+		radial-gradient(circle, #7e00ff 0.5vmin, #0000 0) 10% 60%, 
+		radial-gradient(circle, #7e00ff 0.2vmin, #0000 0) 31% 80%, 
+		radial-gradient(circle, #7e00ff 0.3vmin, #0000 0) 80% 10%, 
+		radial-gradient(circle, #7e00ff 0.2vmin, #0000 0) 90% 23%, 
+		radial-gradient(circle, #7e00ff 0.3vmin, #0000 0) 45% 20%, 
+		radial-gradient(circle, #7e00ff 0.5vmin, #0000 0) 13% 24%;
+		background-size: 0.5vmin 0.5vmin;
+		background-repeat: no-repeat;
+		animation: firework 2.5s infinite;
+}
+.firework3 {
+    top: 20%;
+    left: 76%;
+    background: radial-gradient(circle, #ff0077 0.2vmin, #0000 0) 50% 00%, 
+		radial-gradient(circle, #ff0077 0.3vmin, #0000 0) 00% 50%, 
+		radial-gradient(circle, #ff0077 0.5vmin, #0000 0) 50% 99%, 
+		radial-gradient(circle, #ff0077 0.2vmin, #0000 0) 99% 50%, 
+		radial-gradient(circle, #ff0077 0.3vmin, #0000 0) 80% 90%, 
+		radial-gradient(circle, #ff0077 0.5vmin, #0000 0) 95% 90%, 
+		radial-gradient(circle, #ff0077 0.5vmin, #0000 0) 10% 60%, 
+		radial-gradient(circle, #ff0077 0.2vmin, #0000 0) 31% 80%, 
+		radial-gradient(circle, #ff0077 0.3vmin, #0000 0) 80% 10%, 
+		radial-gradient(circle, #ff0077 0.2vmin, #0000 0) 90% 23%, 
+		radial-gradient(circle, #ff0077 0.3vmin, #0000 0) 45% 20%, 
+		radial-gradient(circle, #ff0077 0.5vmin, #0000 0) 13% 24%;
+		background-size: 0.5vmin 0.5vmin;
+		background-repeat: no-repeat;
+		animation: firework 2s infinite;
+}
+@keyframes firework {
+	0% {
+		transform: translate(-50%, 60vh);
+		width: 0.5vmin;
+		opacity: 0;
+	}	
+	50% {
+		width: 0.5vmin;
+		opacity: 1;
+	}
+	100% {
+		width: 45vmin;
+		opacity: 0;
+	}
+}
+
+.game-over button {
+	width: 180px;
+	cursor: pointer;
+    position: relative;
+    padding: 1rem 3rem;
+    border-radius: 2.75rem;
+    line-height: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.game-over button::before {
+	content: "";
+    display: block;
+    height: 0.15rem;
+    position: absolute;
+    top: 0.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 3.5rem);
+    background: #fff;
+    border-radius: 100%;
+    opacity: 0.7;
+    background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, 
+		rgba(255,255,255,0.00) 100%);
+}
+
+.game-over button::after {
+	content: "";
+	display: block;
+	height: 0.25rem;
+	position: absolute;
+	bottom: 0.75rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 7.5rem);
+	background: #fff;
+	border-radius: 100%;
+	
+	filter: blur(1px);
+	opacity: 0.05;
+	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, 
+		rgba(255,255,255,0.00) 100%);
+}
+
+.game-over .loose {
+    border: 1px solid #2b3244;
+    background-image: linear-gradient(-180deg, #5f2f2f 0%, #691010 100%);
+    box-shadow: 0 1rem 1.25rem 0 rgb(23 33 56 / 50%), 0 -0.25rem 1.5rem rgb(155 15 15) inset, 
+		0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset, 0 0.25rem 0.5rem 0 rgb(58 19 24) inset;
+}
+
+.game-over .loose span {
+	color: transparent;
+    background-image: linear-gradient(0deg, #743e3e 0%, #FEFAFD 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter: drop-shadow(0 2px 2px hsla(290, 100%, 20%, 1));
+}
+
+.game-over .win {
+	border: 1px solid #de29da;
+    background-image: linear-gradient(-180deg, #ffffff 0%, #0f6a7c 100%);
+    box-shadow: 0 1rem 1.25rem 0 rgb(195 22 156 / 50%), 0 -0.25rem 1.5rem rgb(129 15 155) inset, 
+		0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset, 0 0.25rem 0.5rem 0 rgb(70 207 125) inset;
+}
+
+.game-over .win span {
+	color: transparent;
+	background-color: #fbe6f6;
+	-webkit-background-clip: text;
+	background-clip: text;
+	filter: drop-shadow(0 2px 2px rgb(186, 5, 144));
+}

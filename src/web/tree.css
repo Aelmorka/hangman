@@ -1,0 +1,104 @@
+.hanger__tree {
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 10px;
+	width: 160px;
+	height: 110px;
+	transform: rotate(180deg);
+	animation: tree-appear 1s;
+	animation-iteration-count: 1;
+}
+
+@keyframes tree-appear {
+	0% {
+		left: -200px;
+	}
+
+	100% {
+		left: 0;
+	}
+}
+
+.branch {
+	border-color: black;
+	position: absolute;
+	border-style: solid;
+}
+
+.branch1 {
+	border-width: 10px 0 0 0;
+	width: 60px;
+	height: 34px;
+	right: 0;
+	transform: rotate(6deg);
+	border-radius: 10px 0 0 0;
+	top: 44px;
+}
+
+.branch2 {
+	border-width: 0 0 6px 0;
+	width: 60px;
+	height: 20px;
+	right: 5px;
+	transform: rotate(42deg);
+	top: 12px;
+	border-radius: 0 20px;
+}
+
+.branch3 {
+	border-width: 7px 0 0 0;
+	width: 63px;
+	height: 20px;
+	right: -10px;
+	transform: rotate(318deg);
+	top: 65px;
+	border-radius: 20px 10px;
+}
+
+.branch4 {
+	border-width: 9px 2px 0 0;
+	width: 103px;
+	height: 20px;
+	right: 51px;
+	transform: rotate(169deg);
+	top: 39px;
+	border-radius: 10px 32px;
+}
+
+.branch5 {
+	border-width: 6px 0 0 0;
+	width: 46px;
+	height: 20px;
+	right: 89px;
+	transform: rotate(318deg);
+	top: 70px;
+	border-radius: 20px 10px;
+}
+
+.hanger__loop {
+	position: absolute;
+	width: 80px;
+	height: 100px;
+	left: 40px;
+	top: 51px;
+}
+
+.hanger__loop svg {
+	position: absolute;
+	top: 10px;
+	left: 12px;
+}
+
+.path {
+	stroke-dasharray: 3000;
+	stroke-dashoffset: 3000;
+	animation: dash 5s linear forwards;
+	animation-iteration-count: 1;
+}
+
+@keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
+}

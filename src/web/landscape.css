@@ -1,0 +1,85 @@
+.landscape {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+}
+.sun {
+	position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ffed54;
+    box-shadow: 0 0 60px 30px #FFEB3B, 0 0 100px 60px #FFEB3B;
+    border-radius: 50%;
+    left: 50px;
+    top: 40px;
+}
+.dark .sun {
+	animation: sun-move 2s linear;
+	top: 140px;
+	left: -150px;
+}
+@keyframes sun-move {
+	0% {
+		top: 40px;
+		left: 50px;
+	}
+	100% {
+		top: 140px;
+		left: -150px;
+	}
+}
+.mountain {
+	position: absolute;
+}
+.mountain1 {
+	border-bottom: 250px solid #0db80d;
+    width: 120px;
+    height: 0;
+    border-left: 630px solid transparent;
+    right: 0;
+    top: 190px;
+}
+.dark .mountain1 {
+	border-bottom-color: #0a2f0a;
+	animation: mount 2s linear;
+}
+.mountain2 {
+    width: 400px;
+    height: 135px;
+    bottom: 0;
+    background: green;
+    border-top-right-radius: 100%;
+}
+.mountain3 {
+	border-bottom: 58px solid green;
+    width: 360px;
+    bottom: 0;
+    border-right: 120px solid transparent;
+}
+.dark .mountain2 {
+	background-color: #0c3a0c;
+	animation: mount2 2s linear;
+}
+.dark .mountain3 {
+	border-bottom-color: #0c3a0c;
+	animation: mount 2s linear;
+}
+@keyframes mount {
+	0% {
+		border-bottom-color: #0db80d;
+	}
+	
+	100% {
+	  border-bottom-color: #0a2f0a;
+	}
+}
+@keyframes mount2 {
+	0% {
+		background: #0db80d;
+	}
+	
+	100% {
+		background: #0a2f0a;
+	}	
+}

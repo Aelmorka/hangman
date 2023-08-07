@@ -3,27 +3,25 @@ export default function Hanger({mistakes}) {
         <div className={`hanger ${mistakes >= 1 ? 'dark' : ''}`}>   
             <div className="landscape">             
                 <div className="sun"></div>
-                <div class="cartoon hb">
-                        <div class="minar-top minar-top-2"></div>
-                        <div class="minar-top"></div>
-                        <div class="minar ha"></div>
-                        <div class="main-roof-behind"></div>
-                        <div class="main-roof ha"></div>
-                        <div class="main-top"></div>
-                        <div class="flag flag-4"></div>
-                        <div class="main-tower-roof"></div>
-                        <div class="main-tower"></div>
-                        <div class="room-1"></div>
-                        <div class="room-2"></div>
-                        <div class="room-3 ha"></div>
-                        <div class="window-curved"></div>
-                        <div class="flag-pole-top"></div>
-                    </div>
-                    <div className="mountain mountain1"></div>
-                    <div className="mountain mountain2"></div>
-                    <div className="mountain mountain3"></div>
-                    <div className="mountain mountain4"></div>
-                
+                <div className="cartoon hb">
+                    <div className="minar-top minar-top-2"></div>
+                    <div className="minar-top"></div>
+                    <div className="minar ha"></div>
+                    <div className="main-roof-behind"></div>
+                    <div className="main-roof ha"></div>
+                    <div className="main-top"></div>
+                    <div className="flag flag-4"></div>
+                    <div className="main-tower-roof"></div>
+                    <div className="main-tower"></div>
+                    <div className="room-1"></div>
+                    <div className="room-2"></div>
+                    <div className="room-3 ha"></div>
+                    <div className="window-curved"></div>
+                    <div className="flag-pole-top"></div>
+                </div>
+                <div className="mountain mountain1"></div>
+                <div className="mountain mountain2"></div>
+                <div className="mountain mountain3"></div>    
             </div>
             {mistakes >= 1 &&
                 <div className="fog__container">
